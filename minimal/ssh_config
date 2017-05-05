@@ -1,0 +1,17 @@
+# TO disable Host key checkinh
+# Host *
+#   StrictHostKeyChecking no
+#   UserKnownHostsFile=/dev/null
+
+# SSH proxy
+# Host bastion
+#   Hostname <ip_or_hostname>
+#   User <user>
+
+Host myserver
+  # Hostname <ip_or_hostname>
+  # User <user>
+  Hostname staging.brain.dreamquark.com
+  User ubuntu
+  # SSH jump from bastion
+  # ProxyCommand ssh -F ssh_config bastion -W %h:%p

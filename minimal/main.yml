@@ -1,0 +1,27 @@
+---
+- name: play on myserver
+  hosts: myserver # or mygroup or all
+  gather_facts: true
+  remote_user: <user>
+  become: true
+  become_method: sudo
+  # become_user: root
+
+  # vars: []
+
+  # pre_tasks:
+  #   - debug:
+  #       var: hostvars[inventory_hostname]
+
+  # roles:
+  #   - <rolename>
+
+  tasks:
+    - debug:
+        var: hostvars[inventory_hostname]
+
+  # post_tasks:
+  #   - debug:
+  #       var: hostvars[inventory_hostname]
+
+  # handlers: []
